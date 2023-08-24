@@ -12,9 +12,10 @@
 /* string functions 1*/
 int _putchar(char c);
 int _puts(char *str);
+int _strlen(char *str);
 
 /* errors */
-int _perror(const char *err);
+int _perror(char *err);
 /* main */
 int _scanf(const char *format, ...);
 

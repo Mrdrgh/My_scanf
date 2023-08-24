@@ -15,4 +15,5 @@ int _scanf(const char *format, ...)
 	{
 		
 	}
+	return (0);
 }

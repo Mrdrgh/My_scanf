@@ -28,5 +28,17 @@ int _puts(char *str)
 }
 
 /**
- * _strlen - 
+ * _strlen - the len of str
+ * @str: the str to have the len of
+ * Return: the len of str
 */
+
+int _strlen(char *str)
+{
+	int i = 0;
+
+
+	for (; str[i]; i++);
+
+	return (i);
+}
