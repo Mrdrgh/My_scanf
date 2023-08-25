@@ -32,7 +32,8 @@ int (*get_function(const char *, functs_struct *))();
 
 /* assigning functions_1 */
 int assign_int(va_list );
-
+int assign_float(va_list );
+int assign_char(va_list );
 /* errors */
 int _perror(char *err);
 /* main */

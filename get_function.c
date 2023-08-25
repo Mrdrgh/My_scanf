@@ -10,13 +10,22 @@
 
 int (*get_function(const char *str, functs_struct *S))()
 {
-	int i = 0;
+	int i = 0, j = 0;
 
-	while (S[i].spec)
+	while (str[j])
 	{
-		if (S[i].spec[0] == *str)
-			return (S[i].funct);
-		i++;
+		if (str[j] != '\t' && str[j] != ' ')
+		{
+			i = 0;
+			while (S[i].spec)
+			{
+				if (S[i].spec[0] == str[j])
+						return (S[i].funct);
+				i++;
+			}
+		}
+		else
+			j++;
 	}
 	return (NULL);
 }
