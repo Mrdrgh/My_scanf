@@ -58,7 +58,7 @@ int assign_float(va_list var)
 }
 
 /**
- * assign-char - assigns char , this is close to assign int
+ * assign_char - assigns char , this is close to assign int
  * @var: the var list
  * Return: 1 on success 0 on failiure
 */
@@ -74,3 +74,20 @@ int assign_char(va_list var)
 	return (1);
 }
 
+/**
+ * assign_str - assigns a string
+ * @var: the variable list
+ * Return: 1 on success 0 on failiure
+*/
+int assign_str(va_list var)
+{
+	char *str = va_arg(var, char *), c;
+
+	c = getchar();
+	while (c != '\n')
+	{
+		*str++ = c;
+		c = getchar();
+	}
+	return (1);
+}

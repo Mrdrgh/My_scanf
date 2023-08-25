@@ -20,7 +20,7 @@ int (*get_function(const char *str, functs_struct *S))()
 			while (S[i].spec)
 			{
 				if (S[i].spec[0] == str[j])
-						return (S[i].funct);
+					return (S[i].funct);
 				i++;
 			}
 		}

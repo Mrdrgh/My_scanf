@@ -8,14 +8,14 @@
 int _scanf(const char *format, ...)
 {
 	functs_struct S[] = {{"d", assign_int}, {"i", assign_int}, {"f", assign_float},
-	{"c", assign_char}, {NULL, NULL}};
+	{"c", assign_char}, {"s", assign_str}, {NULL, NULL}};
 	int items_assigned = 0, (*function_pointer)();
 	va_list var;
 
 	va_start(var, format);
 	if (!format || (*format == '%' && !*(format + 1)))
 	{
-		_perror("no format found");
+		_perror("no format found\n");
 		return (items_assigned);
 	}
 	while (*format && *(format + 1))
