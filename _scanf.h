@@ -28,7 +28,7 @@ int _puts(char *str);
 int _strlen(char *str);
 int _strcmp(char *, char *);
 /* functions pointers*/
-int (*get_function(const char *, functs_struct *))();
+int (*get_function(const char *, functs_struct *, int *))();
 
 /* assigning functions_1 */
 int assign_int(va_list );

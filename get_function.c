@@ -8,24 +8,25 @@
  * Return: the pointer to the right function, or NULL if no specifier found
 */
 
-int (*get_function(const char *str, functs_struct *S))()
+int (*get_function(const char *str, functs_struct *S, int *chars_consumed))()
 {
-	int i = 0, j = 0;
-
-	while (str[j])
+	int i = 0;
+	
+	*chars_consumed = 0;
+	while (str[*chars_consumed])
 	{
-		if (str[j] != '\t' && str[j] != ' ')
+		if (str[*chars_consumed] != '\t' && str[*chars_consumed] != ' ')
 		{
 			i = 0;
 			while (S[i].spec)
 			{
-				if (S[i].spec[0] == str[j])
+				if (S[i].spec[0] == str[*chars_consumed])
 					return (S[i].funct);
 				i++;
 			}
 		}
 		else
-			j++;
+			(*chars_consumed)++;;
 	}
 	return (NULL);
 }
