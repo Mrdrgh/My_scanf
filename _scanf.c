@@ -31,7 +31,7 @@ int _scanf(const char *format, ...)
 			_putchar(*(format + 1)); _putchar('\n');
 			return (items_assigned);
 		}
-		items_assigned = function_pointer(var);
+		items_assigned += function_pointer(var);
 		format += chars_consumed + 2;
 	}
 	return (items_assigned);

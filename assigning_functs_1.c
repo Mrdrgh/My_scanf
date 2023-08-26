@@ -12,9 +12,10 @@ int assign_int(va_list var)
 	ssize_t chars_nbr = 0;
 	char *line_buffer = NULL;
 	size_t n = 0;
+
 	chars_nbr = getline(&line_buffer, &n, stdin);
 	line_buffer[strcspn(line_buffer, "\n")] = '\0';
-
+	(void) chars_nbr;
 	temp = atoi(line_buffer);
 	free(line_buffer);
 	if (temp)
@@ -40,9 +41,10 @@ int assign_float(va_list var)
 	ssize_t chars_nbr = 0;
 	char *line_buffer = NULL;
 	size_t n = 0;
+
 	chars_nbr = getline(&line_buffer, &n, stdin);
 	line_buffer[strcspn(line_buffer, "\n")] = '\0';
-
+	(void) chars_nbr;
 	temp = atof(line_buffer);
 	free(line_buffer);
 	if (temp)
